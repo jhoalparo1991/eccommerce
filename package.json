@@ -1,0 +1,30 @@
+{
+  "name": "eccommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhoalparo1991/eccommerce.git"
+  },
+  "keywords": [],
+  "author": "jhonatan alberto padilla rovira <jhoalparo1991@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhoalparo1991/eccommerce/issues"
+  },
+  "homepage": "https://github.com/jhoalparo1991/eccommerce#readme",
+  "dependencies": {
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
+    "expresss": "^0.0.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  }
+}

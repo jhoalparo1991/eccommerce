@@ -1,6 +1,7 @@
 const debug = require('debug')('Sequelize')
 const { Sequelize } = require("sequelize");
 const Config = require("../config/config");
+const setupModel = require('../db/models/');
 
 const dialect = Config.dbDialect;
 const user = Config.dbUser;
@@ -19,6 +20,8 @@ async function connection() {
 
     await sequelize.authenticate()
 
+    setupModel(sequelize);
+    
     debug('Database connected succesfully')
   
 } catch (error) {

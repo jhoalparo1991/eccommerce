@@ -8,12 +8,16 @@ const indexRoutes = require('./routes');
 // Initialization
 const app = express();
 require('./utils/database');
-
+const { errorHandler,logErrors,validatorErrors } = require('./middlewares/error.handler')
 // Setting
 app.set('PORT',Config.port)
 
 // Middlewares
-app.use(morgan('dev'))
+app.use(morgan('dev'));
+app.use(express.json());
+app.use(errorHandler)
+app.use(logErrors)
+app.use(validatorErrors)
 
 // Routes
 app.use('/api/v1/',indexRoutes);
